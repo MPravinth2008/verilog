@@ -1,0 +1,97 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x597c9ca9f2b0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x597c9cab1840 .scope module, "tb_xor_gate" "tb_xor_gate" 3 1;
+ .timescale 0 0;
+v0x597c9cac8360_0 .var "A", 0 0;
+v0x597c9cac8400_0 .var "B", 0 0;
+v0x597c9cac84c0_0 .net "Y_BL", 0 0, v0x597c9cac77e0_0;  1 drivers
+v0x597c9cac8590_0 .net "Y_DFL", 0 0, L_0x597c9cac8810;  1 drivers
+v0x597c9cac8660_0 .net "Y_GL", 0 0, L_0x597c9cac8750;  1 drivers
+S_0x597c9cab19d0 .scope module, "BL" "xor_gate_bl" 3 11, 4 1 0, S_0x597c9cab1840;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+v0x597c9cab0940_0 .net "A", 0 0, v0x597c9cac8360_0;  1 drivers
+v0x597c9cac7720_0 .net "B", 0 0, v0x597c9cac8400_0;  1 drivers
+v0x597c9cac77e0_0 .var "Y", 0 0;
+E_0x597c9cab3210 .event anyedge, v0x597c9cab0940_0, v0x597c9cac7720_0;
+S_0x597c9cac7900 .scope module, "DFL" "xor_gate_dfl" 3 10, 5 1 0, S_0x597c9cab1840;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+L_0x597c9cac8810 .functor XOR 1, v0x597c9cac8360_0, v0x597c9cac8400_0, C4<0>, C4<0>;
+v0x597c9cac7b30_0 .net "A", 0 0, v0x597c9cac8360_0;  alias, 1 drivers
+v0x597c9cac7c20_0 .net "B", 0 0, v0x597c9cac8400_0;  alias, 1 drivers
+v0x597c9cac7cf0_0 .net "Y", 0 0, L_0x597c9cac8810;  alias, 1 drivers
+S_0x597c9cac7e00 .scope module, "GL" "xor_gate_gl" 3 9, 6 1 0, S_0x597c9cab1840;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+L_0x597c9cac8750 .functor XOR 1, v0x597c9cac8360_0, v0x597c9cac8400_0, C4<0>, C4<0>;
+v0x597c9cac8060_0 .net "A", 0 0, v0x597c9cac8360_0;  alias, 1 drivers
+v0x597c9cac8150_0 .net "B", 0 0, v0x597c9cac8400_0;  alias, 1 drivers
+v0x597c9cac8260_0 .net "Y", 0 0, L_0x597c9cac8750;  alias, 1 drivers
+    .scope S_0x597c9cab19d0;
+T_0 ;
+    %wait E_0x597c9cab3210;
+    %load/vec4 v0x597c9cab0940_0;
+    %load/vec4 v0x597c9cac7720_0;
+    %xor;
+    %store/vec4 v0x597c9cac77e0_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0x597c9cab1840;
+T_1 ;
+    %vpi_call/w 3 15 "$dumpfile", "xor_gate.vcd" {0 0 0};
+    %vpi_call/w 3 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x597c9cab1840 {0 0 0};
+    %vpi_call/w 3 17 "$display", " A B | GL , DFL , BL" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x597c9cac8360_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x597c9cac8400_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x597c9cac8360_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x597c9cac8400_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x597c9cac8360_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x597c9cac8400_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x597c9cac8360_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x597c9cac8400_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call/w 3 24 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x597c9cab1840;
+T_2 ;
+    %vpi_call/w 3 29 "$monitor", " %b %b | %b %b %b ", v0x597c9cac8360_0, v0x597c9cac8400_0, v0x597c9cac8660_0, v0x597c9cac8590_0, v0x597c9cac84c0_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_xor_gate.v";
+    "xor_gate_bl.v";
+    "xor_gate_dfl.v";
+    "xor_gate_gl.v";
