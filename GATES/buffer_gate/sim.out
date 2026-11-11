@@ -1,0 +1,74 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x59bc810a2d40 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x59bc810b48a0 .scope module, "tb_buffer_gate" "tb_buffer_gate" 3 1;
+ .timescale 0 0;
+v0x59bc810c9240_0 .var "A", 0 0;
+v0x59bc810c92e0_0 .net "Y_BL", 0 0, v0x59bc810c8930_0;  1 drivers
+v0x59bc810c93a0_0 .net "Y_DFL", 0 0, L_0x59bc810c9630;  1 drivers
+v0x59bc810c94a0_0 .net "Y_GL", 0 0, L_0x59bc810c9570;  1 drivers
+S_0x59bc810b4a30 .scope module, "BL" "buffer_gate_bl" 3 10, 4 1 0, S_0x59bc810b48a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "Y";
+v0x59bc810b4bc0_0 .net "A", 0 0, v0x59bc810c9240_0;  1 drivers
+v0x59bc810c8930_0 .var "Y", 0 0;
+E_0x59bc8107c700 .event anyedge, v0x59bc810b4bc0_0;
+S_0x59bc810c8a50 .scope module, "DFL" "buffer_gate_dfl" 3 9, 5 1 0, S_0x59bc810b48a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "Y";
+L_0x59bc810c9630 .functor BUFZ 1, v0x59bc810c9240_0, C4<0>, C4<0>, C4<0>;
+v0x59bc810c8c30_0 .net "A", 0 0, v0x59bc810c9240_0;  alias, 1 drivers
+v0x59bc810c8d20_0 .net "Y", 0 0, L_0x59bc810c9630;  alias, 1 drivers
+S_0x59bc810c8e20 .scope module, "GL" "buffer_gate_gl" 3 8, 6 1 0, S_0x59bc810b48a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /OUTPUT 1 "Y";
+L_0x59bc810c9570 .functor BUF 1, v0x59bc810c9240_0, C4<0>, C4<0>, C4<0>;
+v0x59bc810c9030_0 .net "A", 0 0, v0x59bc810c9240_0;  alias, 1 drivers
+v0x59bc810c9120_0 .net "Y", 0 0, L_0x59bc810c9570;  alias, 1 drivers
+    .scope S_0x59bc810b4a30;
+T_0 ;
+    %wait E_0x59bc8107c700;
+    %load/vec4 v0x59bc810b4bc0_0;
+    %store/vec4 v0x59bc810c8930_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0x59bc810b48a0;
+T_1 ;
+    %vpi_call/w 3 14 "$dumpfile", "buffer_gate.vcd" {0 0 0};
+    %vpi_call/w 3 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x59bc810b48a0 {0 0 0};
+    %vpi_call/w 3 16 "$display", "A| GL,DFL,BL" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x59bc810c9240_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x59bc810c9240_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call/w 3 21 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0x59bc810b48a0;
+T_2 ;
+    %vpi_call/w 3 26 "$monitor", " %b | %b %b %b", v0x59bc810c9240_0, v0x59bc810c94a0_0, v0x59bc810c93a0_0, v0x59bc810c92e0_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "-";
+    "tb_buffer_gate.v";
+    "buffer_gate_bl.v";
+    "buffer_gate_dfl.v";
+    "buffer_gate_gl.v";
