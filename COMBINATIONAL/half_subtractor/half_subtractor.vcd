@@ -1,0 +1,58 @@
+$date
+	Thu Nov 12 07:33:34 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_half_subtractor $end
+$var wire 1 ! Diff_DFL $end
+$var wire 1 " Diff_BL $end
+$var wire 1 # Borr_DFL $end
+$var wire 1 $ Borr_BL $end
+$var reg 1 % A $end
+$var reg 1 & B $end
+$scope module BL $end
+$var wire 1 % A $end
+$var wire 1 & B $end
+$var reg 1 $ Borr $end
+$var reg 1 " Diff $end
+$upscope $end
+$scope module DFL $end
+$var wire 1 % A $end
+$var wire 1 & B $end
+$var wire 1 # Borr $end
+$var wire 1 ! Diff $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1$
+1"
+1!
+1#
+1&
+#20
+0#
+0$
+0&
+1%
+#30
+0"
+0!
+1&
+#40
