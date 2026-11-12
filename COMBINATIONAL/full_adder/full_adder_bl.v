@@ -2,9 +2,12 @@ module full_adder_bl(
     input A,
     input B,
     input Cin,
-    output reg Sum;
-    output reg Carry;
+    output reg Sum,
+    output reg Cout
 );
 always @(*)
 begin
-Sum = A^B^Cin
+Sum = A^B^Cin;
+Cout = (A&B)|(B&Cin)|(A&Cin);
+end 
+endmodule

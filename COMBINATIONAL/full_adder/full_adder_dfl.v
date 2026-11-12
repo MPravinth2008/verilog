@@ -5,6 +5,6 @@ module full_adder_dfl(
     output Sum,
     output Cout
 );
-assign sum = A^B^C;
-assign carry = (A&B)|(B&Cin)|(A&Cin);
+assign Sum = A^B^Cin;
+assign Cout = (A&B)|(B&Cin)|(A&Cin);
 endmodule

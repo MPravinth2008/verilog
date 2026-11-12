@@ -1,0 +1,117 @@
+$date
+	Thu Nov 12 06:58:19 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_full_adder $end
+$var wire 1 ! Sum_GL $end
+$var wire 1 " Sum_DFL $end
+$var wire 1 # Sum_BL $end
+$var wire 1 $ Cout_GL $end
+$var wire 1 % Cout_DFL $end
+$var wire 1 & Cout_BL $end
+$var reg 1 ' A $end
+$var reg 1 ( B $end
+$var reg 1 ) Cin $end
+$scope module BL $end
+$var wire 1 ' A $end
+$var wire 1 ( B $end
+$var wire 1 ) Cin $end
+$var reg 1 & Cout $end
+$var reg 1 # Sum $end
+$upscope $end
+$scope module DFL $end
+$var wire 1 ' A $end
+$var wire 1 ( B $end
+$var wire 1 ) Cin $end
+$var wire 1 % Cout $end
+$var wire 1 " Sum $end
+$upscope $end
+$scope module GL $end
+$var wire 1 ' A $end
+$var wire 1 ( B $end
+$var wire 1 ) Cin $end
+$var wire 1 $ Cout $end
+$var wire 1 ! Sum $end
+$var wire 1 * x1 $end
+$var wire 1 + x2 $end
+$var wire 1 , x3 $end
+$var wire 1 - x4 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1#
+1"
+1!
+1)
+#20
+1*
+0)
+1(
+#30
+1%
+1$
+1&
+0#
+0"
+0!
+1-
+1)
+#40
+0%
+0$
+1"
+1!
+0-
+0&
+1#
+0)
+0(
+1'
+#50
+1%
+1$
+1&
+0#
+0"
+0!
+1,
+1)
+#60
+0,
+0*
+1+
+0)
+1(
+#70
+1#
+1"
+1!
+1,
+1-
+1)
+#80
