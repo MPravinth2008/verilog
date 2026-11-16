@@ -1,0 +1,56 @@
+$date
+	Mon Nov 16 06:41:55 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_demux_1to2 $end
+$var wire 1 ! Y1_DFL $end
+$var wire 1 " Y1_BL $end
+$var wire 1 # Y0_DFL $end
+$var wire 1 $ Y0_BL $end
+$var reg 1 % D $end
+$var reg 1 & S $end
+$scope module BL $end
+$var wire 1 % D $end
+$var wire 1 & S $end
+$var reg 1 $ Y0 $end
+$var reg 1 " Y1 $end
+$upscope $end
+$scope module DFL $end
+$var wire 1 % D $end
+$var wire 1 & S $end
+$var wire 1 # Y0 $end
+$var wire 1 ! Y1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1&
+#20
+1#
+1$
+0&
+1%
+#30
+0#
+1"
+0$
+1!
+1&
+#40
