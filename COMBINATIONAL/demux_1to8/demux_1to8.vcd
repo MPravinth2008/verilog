@@ -1,0 +1,154 @@
+$date
+	Tue Nov 17 04:34:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_demux_1to8 $end
+$var wire 1 ! Y7_DFL $end
+$var wire 1 " Y7_BL $end
+$var wire 1 # Y6_DFL $end
+$var wire 1 $ Y6_BL $end
+$var wire 1 % Y5_DFL $end
+$var wire 1 & Y5_BL $end
+$var wire 1 ' Y4_DFL $end
+$var wire 1 ( Y4_BL $end
+$var wire 1 ) Y3_DFL $end
+$var wire 1 * Y3_BL $end
+$var wire 1 + Y2_DFL $end
+$var wire 1 , Y2_BL $end
+$var wire 1 - Y1_DFL $end
+$var wire 1 . Y1_BL $end
+$var wire 1 / Y0_DFL $end
+$var wire 1 0 Y0_BL $end
+$var reg 1 1 D $end
+$var reg 1 2 S0 $end
+$var reg 1 3 S1 $end
+$var reg 1 4 S2 $end
+$scope module B $end
+$var wire 1 1 D $end
+$var wire 1 2 S0 $end
+$var wire 1 3 S1 $end
+$var wire 1 4 S2 $end
+$var reg 1 0 Y0 $end
+$var reg 1 . Y1 $end
+$var reg 1 , Y2 $end
+$var reg 1 * Y3 $end
+$var reg 1 ( Y4 $end
+$var reg 1 & Y5 $end
+$var reg 1 $ Y6 $end
+$var reg 1 " Y7 $end
+$upscope $end
+$scope module DFL $end
+$var wire 1 1 D $end
+$var wire 1 2 S0 $end
+$var wire 1 3 S1 $end
+$var wire 1 4 S2 $end
+$var wire 1 / Y0 $end
+$var wire 1 - Y1 $end
+$var wire 1 + Y2 $end
+$var wire 1 ) Y3 $end
+$var wire 1 ' Y4 $end
+$var wire 1 % Y5 $end
+$var wire 1 # Y6 $end
+$var wire 1 ! Y7 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+14
+#20
+04
+13
+#30
+14
+#40
+04
+03
+12
+#50
+14
+#60
+04
+13
+#70
+14
+#80
+1/
+10
+04
+03
+02
+11
+#90
+0/
+1'
+1(
+00
+14
+#100
+1+
+0'
+0#
+0(
+04
+13
+#110
+0+
+1#
+1$
+14
+#120
+1%
+0#
+0$
+1&
+0!
+03
+12
+#130
+1)
+0%
+0!
+0&
+1*
+1,
+04
+13
+#140
+0)
+1!
+1"
+0*
+0,
+14
+#150
