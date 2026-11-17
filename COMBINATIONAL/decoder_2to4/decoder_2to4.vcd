@@ -1,0 +1,74 @@
+$date
+	Tue Nov 17 05:13:00 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_decoder_2to4 $end
+$var wire 1 ! Y3_DFL $end
+$var wire 1 " Y3_BL $end
+$var wire 1 # Y2_DFL $end
+$var wire 1 $ Y2_BL $end
+$var wire 1 % Y1_DFL $end
+$var wire 1 & Y1_BL $end
+$var wire 1 ' Y0_DFL $end
+$var wire 1 ( Y0_BL $end
+$var reg 1 ) A0 $end
+$var reg 1 * A1 $end
+$scope module BL $end
+$var wire 1 ) A0 $end
+$var wire 1 * A1 $end
+$var reg 1 ( Y0 $end
+$var reg 1 & Y1 $end
+$var reg 1 $ Y2 $end
+$var reg 1 " Y3 $end
+$upscope $end
+$scope module DFL $end
+$var wire 1 ) A0 $end
+$var wire 1 * A1 $end
+$var wire 1 ' Y0 $end
+$var wire 1 % Y1 $end
+$var wire 1 # Y2 $end
+$var wire 1 ! Y3 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0*
+0)
+1(
+1'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+0'
+1&
+0(
+1%
+1*
+#20
+1#
+0%
+1$
+0&
+0*
+1)
+#30
+0#
+1"
+0$
+1!
+1*
+#40
