@@ -1,0 +1,116 @@
+$date
+	Tue Nov 17 07:55:13 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_encoder_8to3 $end
+$var wire 1 ! Y2_DFL $end
+$var wire 1 " Y2_BL $end
+$var wire 1 # Y1_DFL $end
+$var wire 1 $ Y1_BL $end
+$var wire 1 % Y0_DFL $end
+$var wire 1 & Y0_BL $end
+$var reg 1 ' D0 $end
+$var reg 1 ( D1 $end
+$var reg 1 ) D2 $end
+$var reg 1 * D3 $end
+$var reg 1 + D4 $end
+$var reg 1 , D5 $end
+$var reg 1 - D6 $end
+$var reg 1 . D7 $end
+$scope module BL $end
+$var wire 1 ' D0 $end
+$var wire 1 ( D1 $end
+$var wire 1 ) D2 $end
+$var wire 1 * D3 $end
+$var wire 1 + D4 $end
+$var wire 1 , D5 $end
+$var wire 1 - D6 $end
+$var wire 1 . D7 $end
+$var reg 1 & Y0 $end
+$var reg 1 $ Y1 $end
+$var reg 1 " Y2 $end
+$upscope $end
+$scope module DFL $end
+$var wire 1 ' D0 $end
+$var wire 1 ( D1 $end
+$var wire 1 ) D2 $end
+$var wire 1 * D3 $end
+$var wire 1 + D4 $end
+$var wire 1 , D5 $end
+$var wire 1 - D6 $end
+$var wire 1 . D7 $end
+$var wire 1 % Y0 $end
+$var wire 1 # Y1 $end
+$var wire 1 ! Y2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+1'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1!
+1"
+1(
+0'
+#20
+1#
+0!
+0"
+1$
+1)
+0(
+#30
+1!
+1"
+1*
+0)
+#40
+1%
+0#
+0!
+0"
+0$
+1&
+1+
+0*
+#50
+1!
+1"
+1,
+0+
+#60
+1#
+0!
+0"
+1$
+1-
+0,
+#70
+1!
+1"
+1.
+0-
+#80
