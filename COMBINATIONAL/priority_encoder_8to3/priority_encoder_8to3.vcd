@@ -1,0 +1,126 @@
+$date
+	Wed Nov 18 08:09:24 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_priority_encoder_8to3 $end
+$var wire 3 ! Y_DFL [2:0] $end
+$var wire 3 " Y_BL [2:0] $end
+$var reg 1 # D0 $end
+$var reg 1 $ D1 $end
+$var reg 1 % D2 $end
+$var reg 1 & D3 $end
+$var reg 1 ' D4 $end
+$var reg 1 ( D5 $end
+$var reg 1 ) D6 $end
+$var reg 1 * D7 $end
+$scope module BL $end
+$var wire 1 # D0 $end
+$var wire 1 $ D1 $end
+$var wire 1 % D2 $end
+$var wire 1 & D3 $end
+$var wire 1 ' D4 $end
+$var wire 1 ( D5 $end
+$var wire 1 ) D6 $end
+$var wire 1 * D7 $end
+$var reg 3 + Y [2:0] $end
+$upscope $end
+$scope module DFL $end
+$var wire 1 # D0 $end
+$var wire 1 $ D1 $end
+$var wire 1 % D2 $end
+$var wire 1 & D3 $end
+$var wire 1 ' D4 $end
+$var wire 1 ( D5 $end
+$var wire 1 ) D6 $end
+$var wire 1 * D7 $end
+$var wire 3 , Y [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 ,
+b0 +
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+1#
+b0 "
+b0 !
+$end
+#10
+b1 !
+b1 ,
+b1 "
+b1 +
+0#
+1$
+#20
+b10 !
+b10 ,
+b10 "
+b10 +
+0$
+1%
+#30
+b11 !
+b11 ,
+b11 "
+b11 +
+0%
+1&
+#40
+b100 !
+b100 ,
+b100 "
+b100 +
+0&
+1'
+#50
+b101 !
+b101 ,
+b101 "
+b101 +
+1#
+1$
+1%
+1&
+1(
+#60
+b110 !
+b110 ,
+b110 "
+b110 +
+1)
+#70
+b111 "
+b111 +
+b111 !
+b111 ,
+1*
+#80
+b0 "
+b0 +
+b0 !
+b0 ,
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+#90
