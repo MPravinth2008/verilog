@@ -1,0 +1,93 @@
+$date
+	Sun Nov 22 06:03:54 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_bcd_to_binary $end
+$var wire 8 ! BINARY_DFL [7:0] $end
+$var wire 8 " BINARY_BL [7:0] $end
+$var reg 8 # BCD [7:0] $end
+$scope module uut1 $end
+$var wire 8 $ BCD [7:0] $end
+$var wire 8 % BINARY [7:0] $end
+$upscope $end
+$scope module uut2 $end
+$var wire 8 & BCD [7:0] $end
+$var reg 8 ' BINARY [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#10
+b101 !
+b101 %
+b101 "
+b101 '
+b101 #
+b101 $
+b101 &
+#20
+b1100 !
+b1100 %
+b1100 "
+b1100 '
+b10010 #
+b10010 $
+b10010 &
+#30
+b10011 !
+b10011 %
+b10011 "
+b10011 '
+b11001 #
+b11001 $
+b11001 &
+#40
+b11001 !
+b11001 %
+b11001 "
+b11001 '
+b100101 #
+b100101 $
+b100101 &
+#50
+b100111 !
+b100111 %
+b100111 "
+b100111 '
+b111001 #
+b111001 $
+b111001 &
+#60
+b101101 !
+b101101 %
+b101101 "
+b101101 '
+b1000101 #
+b1000101 $
+b1000101 &
+#70
+b1100011 !
+b1100011 %
+b1100011 "
+b1100011 '
+b10011001 #
+b10011001 $
+b10011001 &
+#80
